@@ -1,0 +1,4 @@
+await contract.owner()
+(await contract.getParticipantCount()).toString()
+await contract.register({ value: ethers.parseEther("0.01") })
+const contract = await ethers.getContractAt("EventRegistration", "0x5FbDB2315678afecb367f032d93F642f64180aa3");

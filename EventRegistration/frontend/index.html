@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventRegistration dApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎟️ Event Registration</h1>
+            <p class="subtitle">Register for the exclusive event with 0.01 ETH</p>
+        </header>
+
+        <div class="wallet-section card">
+            <h2>🔗 Wallet Connection</h2>
+            <button id="connectWallet" class="btn btn-primary">Connect Wallet</button>
+            <div id="walletInfo" class="wallet-info hidden">
+                <p><strong>Connected:</strong> <span id="walletAddress"></span></p>
+                <p><strong>Network:</strong> <span id="networkInfo">Hardhat Localhost</span></p>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="card stat-card">
+                <h3>👥 Total Participants</h3>
+                <div id="participantCount" class="stat-number">0</div>
+            </div>
+            <div class="card stat-card">
+                <h3>👑 Contract Owner</h3>
+                <div id="contractOwner" class="stat-address">Not loaded</div>
+            </div>
+            <div class="card stat-card">
+                <h3>🎫 Registration Fee</h3>
+                <div class="stat-number">0.01 ETH</div>
+            </div>
+        </div>
+
+        <div class="registration-section card">
+            <h2>Register for Event</h2>
+            <button id="registerBtn" class="btn btn-register" disabled>
+                Register for Event - 0.01 ETH
+            </button>
+            <div id="transactionStatus" class="transaction-status hidden"></div>
+        </div>
+
+        <div class="events-section card">
+            <h2>📋 Registration Events</h2>
+            <div id="eventsList" class="events-list">
+                <div class="empty-state">No registrations yet</div>
+            </div>
+        </div>
+
+        <div class="contract-info card">
+            <h2>📄 Contract Information</h2>
+            <p><strong>Address:</strong> <code>0x5FbDB2315678afecb367f032d93F642f64180aa3</code></p>
+            <p><strong>Network:</strong> Hardhat Localhost (http://127.0.0.1:8545)</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
