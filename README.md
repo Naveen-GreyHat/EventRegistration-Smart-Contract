@@ -51,7 +51,7 @@ EventRegistration/
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone <repo-link>
+git clone https://github.com/Naveen-GreyHat/EventRegistration-Smart-Contract
 cd EventRegistration
 ````
 
